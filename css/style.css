@@ -1,0 +1,253 @@
+:root{
+    --scale1:1.1;
+    --scale2:1.1
+}
+
+*,
+::before
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body{
+    background-color: rgb(243, 227, 207);
+    overflow: hidden;
+} */
+
+header{
+    margin: 0 auto;
+    width: 90%;
+    height: 80vh;
+    position: relative;
+    background-color: blue;
+    background-image:url(../images/land1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white;
+    font-weight: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 1;
+    overflow: hidden;
+}
+header::after{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 28, 28,.5);
+    z-index: -1;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.headtitle{
+    margin: 0 auto;
+    font-size: calc(1.2rem * var(--scale2));
+}
+ul{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    font-size:calc(1.1rem * var(--scale1) );
+    flex-direction: column;
+}
+.headbtn{
+    margin: 0 auto;
+    margin-top: 200px;
+    border: solid 2px rgb(27, 150, 22);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(118, 122, 111, 0.3);
+}
+
+.section{
+    margin: 0 auto;
+    width: 90%;
+    /* height: 95vh; */
+    background-color: rgb(255, 255, 255);
+    font-size: calc(1.1rem * var(--scale1));
+    overflow: hidden;
+    margin-bottom: px;
+    padding: 40px 0;
+}
+.sectiontext{
+    text-align: center;
+    margin-top: 120px;
+    
+}
+.sectiontext h1{
+    line-height: 24px;
+}
+.wrapper{
+    
+    display: grid;
+    grid-template-columns:repeat(1,1fr)  ;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-gap:.5em;
+    grid-auto-rows: minmax(100px, auto);
+    /* justify-items: stretch;
+    align-items: stretch; */
+    grid-auto-rows: 120px;
+    
+  
+}
+.wrapper  > div{
+    /* background: #eee; */
+    /* padding: 1em; */
+
+}
+.wrapper > div:nth-child(odd){
+    /* background: #ddd; */
+}
+
+.box1{
+    background-image: url(../images/land2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+.box2{
+    background-image: url(../images/land1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+
+
+}
+.box3{
+    background-image: url(../images/pexels-eberhard-grossgasteiger-2437291.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
+
+}
+.box4{
+    background-image: url(../images/pexels-hoover-tung-1980870.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+
+main{
+    width: 90%;
+    /* height: 75vh; */
+    margin: 0 auto;
+    background-color: rgb(232, 232, 235);
+    overflow: hidden;
+    font-size: calc(1rem * var(--scale1));
+    padding: 0 0px 35px 0px;
+    
+}
+.mainheader{
+    text-align: center;
+    margin-top: 100px;
+    
+}
+.mainbody{
+    width: 80%;
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+footer{
+    width: 90%;
+    height: 30vh;
+    margin: 0 auto;
+    background-image: url(../images/land1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+footer h1{
+    margin-top: 100px;
+}
+@media (min-width:600px){
+    :root{
+        --scale1:1.2;
+        --scale2:1.3
+
+    }
+    ul{
+        flex-direction: column;
+    }
+    .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mainbody{
+        width: 90%;
+    }
+
+
+@media (min-width:900px){
+    :root{
+        --scale1:1.3;
+        --scale2:1.5
+    }
+    ul{
+        flex-direction: row;
+    }
+    .mainbody{
+        width: 90%;
+    }
+    .wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .box1{
+    background-image: url(../images/land2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 1;
+    grid-row: 1/3;
+   
+
+}
+.box2{
+    background-image: url(../images/land1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 2;
+    grid-row: 1;
+
+
+}
+.box3{
+    background-image: url(../images/pexels-eberhard-grossgasteiger-2437291.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 3 ;
+    grid-row: 1/3;
+    
+
+}
+.box4{
+    background-image: url(../images/pexels-hoover-tung-1980870.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column:2/3;
+    grid-row:2/4
+
+}
+
